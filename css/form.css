@@ -23,18 +23,19 @@ body{
 }
 
 .form{
-    width: 400px;
-    height: auto;
-    color: #fff;
-    font-family: 'roboto', sans-serif;
+    background-color: silver;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
 }
 
 .heading{
     opacity: 0;
     text-transform: capitalize;
     text-align: center;
-    font-size: 80px;
-    font-weight: 300;
+    font-size: 23px;
     margin-bottom: 50px;
 }
 
