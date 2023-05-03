@@ -158,17 +158,34 @@ a {
   }
 }
 
+.timeline-item.item0 {
+    .timeline-img-header{
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../img/item0.png') center center no-repeat;
+        background-size: contain;
+      }
+  }
+
 .timeline-item.item1 {
   .timeline-img-header{
-      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../img/IMG_20230503_160403_449.svg') center center no-repeat;
+      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../img/item1.png') center center no-repeat;
       background-size: cover;
     }
+
+    .timeline-img-header:hover {
+        cursor: pointer;
+        transform: scale(1.25);
+      }
 }
 
 .timeline-item.item2 {
     .timeline-img-header{
-        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../img/IMG_20230503_160403_449.svg') center center no-repeat;
-        background-size: contain;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../img/item2.png') center center no-repeat;
+        background-size: cover;
+      }
+
+      .timeline-img-header:hover {
+        cursor: pointer;
+        transform: scale(1.25);
       }
   }
 
@@ -177,6 +194,11 @@ a {
         background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../img/item3.png') center center no-repeat;
         background-size: cover;
       }
+
+      .timeline-img-header:hover {
+        cursor: pointer;
+        transform: scale(1.25);
+      }
   }
 
   .timeline-item.item4 {
@@ -184,6 +206,41 @@ a {
         background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../img/item4.png') center center no-repeat;
         background-size: cover;
       }
+
+      .timeline-img-header:hover {
+        cursor: pointer;
+        transform: scale(1.25);
+      }
+  }
+
+  .timeline-item.item5 {
+    .timeline-img-header{
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../img/item5.png') center center no-repeat;
+        background-size: contain;
+      }
+
+      .timeline-img-header:hover {
+        cursor: pointer;
+        transform: scale(1.8);
+      }
+  }
+
+  .timeline-item.item6 {
+    .timeline-img-header{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        padding-bottom: 60%; /* change this value to adjust the aspect ratio of the image */
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item6.png') center center no-repeat;
+        background-size: contain;
+        transition: all 0.3s ease-out;
+      }
+    
+    .timeline-img-header:hover {
+      cursor: pointer;
+      transform: scale(1.8);
+    }
   }
 
 
