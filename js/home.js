@@ -2,15 +2,6 @@ const greeting = document.querySelector('.greeting');
 
 const logOut = document.querySelector('.logout');
 
-// Get the current date and time
-var now = new Date();
-
-// Check if the current time is after 3:05am
-if (now.getHours() > 3 || (now.getHours() == 3 && now.getMinutes() >= 8)) {
-  // If it is, open the "after-3-05.html" page
-  alert("Hey its It's 12.00 5.05.2023");
-  window.location.href = "../index.html";
-} 
 
 logOut.onclick = () => {
     sessionStorage.clear();
