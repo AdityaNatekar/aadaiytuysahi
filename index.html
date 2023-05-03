@@ -23,11 +23,10 @@
 
     <script src="js/form.js"></script>
     <script>
-    const submitBtn = document.querySelector('.submit-btn');
     const hardcodedUsername = "Aayushi";
     const hardcodedPassword = "aditya";
 
-    submitBtn.addEventListener('click', () => {
+    function login() {
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
@@ -38,7 +37,7 @@
         } else {
             alert("Invalid username or password");
         }
-    })
+    }
 </script>
     
 </body>
