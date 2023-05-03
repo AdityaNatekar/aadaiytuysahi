@@ -12,7 +12,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../img/IMG_20230503_160403_449.svg');
     background-size: cover;
     background-position: center;
     font-family: 'roboto', sans-serif;
