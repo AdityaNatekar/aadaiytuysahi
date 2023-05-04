@@ -437,7 +437,7 @@ section {
         width: 100%;
         height: 0;
         padding-bottom: 60%; /* change this value to adjust the aspect ratio of the image */
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item17.jpg');
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item17.jpg')center center no-repeat;
         background-size: contain;
         transition: all 0.3s ease-out;
       }
@@ -454,7 +454,7 @@ section {
         width: 100%;
         height: 0;
         padding-bottom: 60%; /* change this value to adjust the aspect ratio of the image */
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item18.jpg');
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item18.jpg')center center no-repeat;
         background-size: contain;
         transition: all 0.3s ease-out;
       }
@@ -471,7 +471,7 @@ section {
         width: 100%;
         height: 0;
         padding-bottom: 60%; /* change this value to adjust the aspect ratio of the image */
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item19.jpg');
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item19.jpg')center center no-repeat;
         background-size: contain;
         transition: all 0.3s ease-out;
       }
@@ -488,12 +488,29 @@ section {
         width: 100%;
         height: 0;
         padding-bottom: 60%; /* change this value to adjust the aspect ratio of the image */
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item20.jpg');
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item20.jpg')center center no-repeat;
         background-size: contain;
         transition: all 0.3s ease-out;
       }
     
   .timeline-item.item20   .timeline-img-header:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    .timeline-item.item21
+    .timeline-img-header{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        padding-bottom: 60%; /* change this value to adjust the aspect ratio of the image */
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4)), url('../img/item21.jpg')center center no-repeat;
+        background-size: contain;
+        transition: all 0.3s ease-out;
+      }
+    
+  .timeline-item.item21   .timeline-img-header:hover {
       cursor: pointer;
       transform: scale(1.1);
     }
