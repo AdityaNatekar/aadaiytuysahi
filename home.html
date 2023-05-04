@@ -139,34 +139,29 @@
           <script>
           
           function showVideo() {
-            // Show the video overlay and container
-            var overlay = document.getElementById("video-overlay");
-            var container = document.getElementById("video-container");
-            overlay.style.display = "block";
-            container.style.display = "block";
-          
-            // Pause any existing YouTube videos
-            var player = document.getElementById("video-container");
-            player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-          }
-          
-          function hideVideo() {
-            // Hide the video overlay and container
-            var overlay = document.getElementById("video-overlay");
-            var container = document.getElementById("video-container");
-            overlay.style.display = "none";
-            container.style.display = "none";
-            var video = document.getElementById("video-container");
-            video.pause();
-          }
-          
-          // Hide the video when the user clicks outside the video container or on the close button
-          var overlay = document.getElementById("video-overlay");
-          overlay.onclick = hideVideo;
-          
-          var closeButton = document.createElement("button");
-          closeButton.innerHTML = "Close";
-          closeButton.onclick = hideVideo;
-          document.getElementById("video-container").appendChild(closeButton);</script>
+              // Show the video overlay and container
+              var overlay = document.getElementById("video-overlay");
+              var container = document.getElementById("video-container");
+              overlay.style.display = "block";
+              container.style.display = "block";
+
+              // Pause any existing YouTube videos
+              var player = document.getElementById("video-container");
+              player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            }
+
+            function hideVideo() {
+              // Hide the video overlay and container
+              var overlay = document.getElementById("video-overlay");
+              var container = document.getElementById("video-container");
+              overlay.style.display = "none";
+              container.style.display = "none";
+
+              // Pause the video
+              var video = document.getElementById("video-container").querySelector("iframe");
+              video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            }
+
+            document.getElementById("video-overlay").addEventListener("click", hideVideo);</script>
 </body>
 </html>
