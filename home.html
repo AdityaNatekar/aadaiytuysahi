@@ -249,7 +249,7 @@
             
               // Pause the video
               var video = container.querySelector("iframe");
-              video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+              video.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
             }
             
             document.getElementById("video-overlay-1").addEventListener("click", function() {
