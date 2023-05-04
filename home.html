@@ -105,7 +105,7 @@
               <p><a>KIDS!!!!This is how it started!!!! <br> <button onclick="showVideo()">Play Video</button></a></p>
               <div id="video-overlay"></div>
               <div id="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1k_XRI3-j1w?start=36" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen autoplay="false" sandbox></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1k_XRI3-j1w?start=36" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen autoplay="false"></iframe>
               </div>
             </div>
            </div> 
@@ -136,16 +136,20 @@
             </div>
           </div>  
 
-          <script>function showVideo() {
+          <script>
+          function showVideo() {
             // Show the video overlay and container
             var overlay = document.getElementById("video-overlay");
             var container = document.getElementById("video-container");
             overlay.style.display = "block";
-            container.style.display = "block";
-          
+            container.classList.add("show");
+
             // Pause any existing YouTube videos
-            var player = document.getElementById("video-player");
-            player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            var player = document.getElementById("video-container");
+            player.contentWindow.postMessage(
+              '{"event":"command","func":"pauseVideo","args":""}',
+              "*"
+            );
           }
           
           function hideVideo() {
@@ -153,7 +157,9 @@
             var overlay = document.getElementById("video-overlay");
             var container = document.getElementById("video-container");
             overlay.style.display = "none";
-            container.style.display = "none";
+            container.classList.remove("show");
+            var video = document.getElementById("video-container");
+            video.pause();
           }
           
           // Hide the video when the user clicks outside the video container or on the close button
