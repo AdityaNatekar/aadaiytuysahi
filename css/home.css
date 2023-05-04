@@ -664,7 +664,7 @@ section {
       }
   }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 393px) {
     /* Video Overlay */
     #video-overlay-1 {
       display: none;
