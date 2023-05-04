@@ -195,7 +195,7 @@ section {
   
   .timeline-item.item1 .timeline-img-header:hover {
     cursor: pointer;
-    transform: scale(1.25);
+    transform: scale(1.1);
   }
 
 .timeline-item.item2 
@@ -206,7 +206,7 @@ section {
 
 .timeline-item.item2 .timeline-img-header:hover {
         cursor: pointer;
-        transform: scale(1.25);
+        transform: scale(1.1);
       }
 
   .timeline-item.item3 
@@ -217,7 +217,7 @@ section {
 
       .timeline-item.item3  .timeline-img-header:hover {
         cursor: pointer;
-        transform: scale(1.25);
+        transform: scale(1.1);
       }
 
   .timeline-item.item4 
@@ -228,7 +228,7 @@ section {
 
   .timeline-item.item4  .timeline-img-header:hover {
         cursor: pointer;
-        transform: scale(1.25);
+        transform: scale(1.1);
       }
 
   .timeline-item.item5 
@@ -239,7 +239,7 @@ section {
 
       .timeline-item.item5  .timeline-img-header:hover {
         cursor: pointer;
-        transform: scale(1.8);
+        transform: scale(1.1);
       }
 
   .timeline-item.item6 
@@ -256,7 +256,7 @@ section {
     
   .timeline-item.item6    .timeline-img-header:hover {
       cursor: pointer;
-      transform: scale(1.8);
+      transform: scale(1.1);
     }
 
     .timeline-item.item7 

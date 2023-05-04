@@ -146,7 +146,7 @@
             container.style.display = "block";
           
             // Pause any existing YouTube videos
-            var player = document.getElementById("video-player");
+            var player = document.getElementById("video-container");
             player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
           }
           
@@ -156,7 +156,7 @@
             var container = document.getElementById("video-container");
             overlay.style.display = "none";
             container.style.display = "none";
-            var video = document.getElementById("video");
+            var video = document.getElementById("video-container");
             video.pause();
           }
           
