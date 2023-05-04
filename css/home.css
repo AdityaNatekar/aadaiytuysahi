@@ -273,7 +273,7 @@ section {
     
   .timeline-item.item7    .timeline-img-header:hover {
       cursor: pointer;
-      transform: scale(1.8);
+      transform: scale(1.1);
     }
 
     .timeline-item.item8 
@@ -290,7 +290,7 @@ section {
     
   .timeline-item.item8    .timeline-img-header:hover {
       cursor: pointer;
-      transform: scale(1.8);
+      transform: scale(1.1);
     }
 
     .timeline-item.item9 
@@ -307,7 +307,7 @@ section {
     
   .timeline-item.item9    .timeline-img-header:hover {
       cursor: pointer;
-      transform: scale(1.8);
+      transform: scale(1.1);
     }
 
 
