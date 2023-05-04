@@ -102,9 +102,9 @@
             <div class="timeline-content timeline-card js--fadeInRight">
               <div class="timeline-img-header"></div>
               <div class="date">2 OCT 2021</div>
-              <p><a>KIDS!!!!This is how it started!!!! This is exactly how I felt  ⬇️  ⬇️  ⬇️  ⬇️  <br> <button onclick="showVideo()">Play Video</button></a></p>
-              <div id="video-overlay"></div>
-              <div id="video-container">
+              <p><a>KIDS!!!!This is how it started!!!! This is exactly how I felt  ⬇️  ⬇️  ⬇️  ⬇️  <br> <button onclick="showVideo('1')">Play Video</button></a></p>
+              <div id="video-overlay-1"></div>
+              <div id="video-container-1">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/1k_XRI3-j1w?start=36" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </div>
@@ -160,9 +160,9 @@
             <div class="timeline-content timeline-card js--fadeInLeft">
               <div class="timeline-img-header"></div>
               <div class="date">20 DEC 2022 </div>
-              <p><a>&hearts;Here a song for you Dear ⬇️ <br> <button onclick="showVideo()">Play Video</button></a></p>
-              <div id="video-overlay"></div>
-              <div id="video-container">
+              <p><a>&hearts;Here a song for you Dear ⬇️ <br> <button onclick="showVideo('2')">Play Video</button></a></p>
+              <div id="video-overlay-2"></div>
+              <div id="video-container-2">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/qoq8B8ThgEM?start=25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </div>
@@ -225,32 +225,37 @@
 
       
 
-          <script>
-          
-          function showVideo() {
+           <script>
+            function showVideo(videoId) {
               // Show the video overlay and container
-              var overlay = document.getElementById("video-overlay");
-              var container = document.getElementById("video-container");
+              var overlay = document.getElementById("video-overlay-" + videoId);
+              var container = document.getElementById("video-container-" + videoId);
               overlay.style.display = "block";
               container.style.display = "block";
-
+            
               // Pause any existing YouTube videos
-              var player = document.getElementById("video-container");
+              var player = container.querySelector("iframe");
               player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
             }
-
-            function hideVideo() {
+            
+            function hideVideo(videoId) {
               // Hide the video overlay and container
-              var overlay = document.getElementById("video-overlay");
-              var container = document.getElementById("video-container");
+              var overlay = document.getElementById("video-overlay-" + videoId);
+              var container = document.getElementById("video-container-" + videoId);
               overlay.style.display = "none";
               container.style.display = "none";
-
+            
               // Pause the video
-              var video = document.getElementById("video-container").querySelector("iframe");
+              var video = container.querySelector("iframe");
               video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
             }
-
-            document.getElementById("video-overlay").addEventListener("click", hideVideo);</script>
+            
+            document.getElementById("video-overlay-1").addEventListener("click", function() {
+              hideVideo("1");
+            });
+            document.getElementById("video-overlay-2").addEventListener("click", function() {
+              hideVideo("2");
+            });
+            </script>
 </body>
 </html>
