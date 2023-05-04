@@ -59,3 +59,29 @@ $(function(){
   
   
   });
+
+
+  function showVideo() {
+    var videoOverlay = document.getElementById("video-overlay");
+    var videoContainer = document.getElementById("video-container");
+    var videoPlayer = document.getElementById("video-player");
+    videoOverlay.style.display = "block";
+    videoContainer.style.display = "block";
+    videoPlayer.src += "?autoplay=1";
+  }
+  
+  document.addEventListener("click", function(event) {
+    var videoOverlay = document.getElementById("video-overlay");
+    var videoContainer = document.getElementById("video-container");
+    var videoPlayer = document.getElementById("video-player");
+    if (event.target == videoOverlay || event.target == videoContainer) {
+      videoOverlay.style.display = "none";
+      videoContainer.style.display = "none";
+      videoPlayer.src = videoPlayer.src.replace("?autoplay=1", "");
+    }
+  });
+  
+  function hideVideo() {
+    var videoPlayer = document.getElementById("video-player");
+    videoPlayer.innerHTML = "";
+  }

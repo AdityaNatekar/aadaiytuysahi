@@ -103,6 +103,11 @@
               <div class="timeline-img-header"></div>
               <div class="date">2 OCT 2021</div>
               <p><a>KIDS!!!!This is how it started!!!!</a></p>
+              <button onclick="showVideo()">Play Video</button>
+              <div id="video-overlay"></div>
+              <div id="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1k_XRI3-j1w?start=36" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
             </div>
            </div> 
       
@@ -131,5 +136,34 @@
               <a class="bnt-more" href="javascript:void(0)">More</a>
             </div>
           </div>  
+
+          <script>function showVideo() {
+            // Show the video overlay and container
+            var overlay = document.getElementById("video-overlay");
+            var container = document.getElementById("video-container");
+            overlay.style.display = "block";
+            container.style.display = "block";
+          
+            // Pause any existing YouTube videos
+            var player = document.getElementById("video-player");
+            player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+          }
+          
+          function hideVideo() {
+            // Hide the video overlay and container
+            var overlay = document.getElementById("video-overlay");
+            var container = document.getElementById("video-container");
+            overlay.style.display = "none";
+            container.style.display = "none";
+          }
+          
+          // Hide the video when the user clicks outside the video container or on the close button
+          var overlay = document.getElementById("video-overlay");
+          overlay.onclick = hideVideo;
+          
+          var closeButton = document.createElement("button");
+          closeButton.innerHTML = "Close";
+          closeButton.onclick = hideVideo;
+          document.getElementById("video-container").appendChild(closeButton);</script>
 </body>
 </html>
