@@ -62,6 +62,29 @@
     height: 100%;
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: none;
+    background-color: #fff; /* set a white background color instead */
+  }
+  .container-bdy {
+    height: auto; /* adjust the height as needed */
+  }
+  h1 {
+    font-size: 2rem; /* decrease the font size */
+  }
+  p {
+    font-size: 1.5rem; /* decrease the font size */
+  }
+  .slideshow-container img {
+    height: 300px; /* adjust the height as needed */
+    width: 100%; /* set the width to 100% */
+  }
+  .slideshow-container {
+    max-width: 100%; /* set the max-width to 100% */
+  }
+}
       </style>
           <div style="display: flex; justify-content: space-between;">
             <button onclick="location.href='home.html'">Back</button>
