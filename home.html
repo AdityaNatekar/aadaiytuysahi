@@ -102,7 +102,7 @@
             <div class="timeline-content timeline-card js--fadeInRight">
               <div class="timeline-img-header"></div>
               <div class="date">2 OCT 2021</div>
-              <p><a>KIDS!!!!This is how it started!!!! <br> <button onclick="showVideo()">Play Video</button></a></p>
+              <p><a>KIDS!!!!This is how it started!!!! This is exactly how I felt  ⬇️  ⬇️  ⬇️  ⬇️  <br> <button onclick="showVideo()">Play Video</button></a></p>
               <div id="video-overlay"></div>
               <div id="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/1k_XRI3-j1w?start=36" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -136,16 +136,25 @@
             </div>
           </div>  
 
-          <script>function showVideo() {
+          <script>
+          function showVideo() {
             // Show the video overlay and container
             var overlay = document.getElementById("video-overlay");
             var container = document.getElementById("video-container");
             overlay.style.display = "block";
             container.style.display = "block";
-          
-            // Pause any existing YouTube videos
-            var player = document.getElementById("video-player");
-            player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+
+            // Play the video
+            var video = document.getElementById("video");
+            video.play();
+
+            // Disable interactions with the page while the video is playing
+            document.body.style.pointerEvents = "none";
+
+            // Add event listener to re-enable interactions when video stops playing
+            video.addEventListener("ended", function() {
+              document.body.style.pointerEvents = "auto";
+            });
           }
           
           function hideVideo() {
@@ -154,6 +163,14 @@
             var container = document.getElementById("video-container");
             overlay.style.display = "none";
             container.style.display = "none";
+
+            // Stop the video
+            var video = document.getElementById("video");
+            video.pause();
+            video.currentTime = 0;
+
+            // Re-enable interactions with the page
+            document.body.style.pointerEvents = "auto";
           }
           
           // Hide the video when the user clicks outside the video container or on the close button
