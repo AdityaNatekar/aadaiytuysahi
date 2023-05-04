@@ -226,7 +226,7 @@ section {
   }
   /*my code    */
   .timeline-item.item0 .timeline-img-header {
-    background: linear-gradient(rgba(159, 39, 39, 0), rgba(0,0,0, .4)), url('../img/item0.png');
+    background: linear-gradient(rgba(159, 39, 39, 0), rgba(0,0,0, .4)), url('../img/item0.png')center center no-repeat;
     background-size: contain;
     padding: 150px 0;
     width: 100%;
